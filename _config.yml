@@ -1,16 +1,16 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+title:       Rich Knight
+email:       hi@rich-knight.com
+author:      Rich Knight"
+description: ""
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "http://rich-knight.com"
 
 # Google analytics
-google_analytics:
+google_analytics: "UA-38039875-1"
 
 # Optional features
-animated:           false
+animated:           true
 show_related_posts: false
 show_post_footers:  false
 
@@ -20,9 +20,9 @@ disqus_shortname:
 
 # Social icons
 show_social_icons: false
-github_username:
+github_username: rcknight
 stackoverflow_id:
-twitter_username:
+twitter_username: rcknight
 google_plus_id:
 linkedin_username:
 bitcoin_url:
@@ -34,6 +34,5 @@ markdown:     redcarpet
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
-paginate:     3
 sass:
   compressed: true
