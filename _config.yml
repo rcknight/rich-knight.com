@@ -36,3 +36,6 @@ redcarpet:
 permalink:    pretty
 sass:
   compressed: true
+
+collections:
+- projects
