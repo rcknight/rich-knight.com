@@ -33,7 +33,7 @@ flattr_button:
 markdown:     redcarpet
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
-permalink:    pretty
+permalink:    /articles/:title/
 sass:
   style: :compressed
 
