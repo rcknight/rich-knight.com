@@ -50,3 +50,10 @@ layout: default
     </div>
   {% endfor %}
 {% endif %}
+
+<style type="text/css">
+    {% capture include_to_scssify %}
+        {% include syntax.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+</style>

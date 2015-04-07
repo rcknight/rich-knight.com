@@ -9,7 +9,7 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/pixyll.css" | prepend: site.baseurl }}" type="text/css">
+    <!--<link rel="stylesheet" href="{{ "/css/pixyll.css" | prepend: site.baseurl }}" type="text/css">-->
 
     <!-- Fonts -->
     {% if site.show_social_icons %}
@@ -45,5 +45,10 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    
+    <style type="text/css">
+    {% capture include_to_scssify %}
+        {% include head.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+    </style>
 </head>
