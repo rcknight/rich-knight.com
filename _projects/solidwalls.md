@@ -1,5 +1,5 @@
 ---
-layout:     project
+layout:     none
 ---
 
 [![Solid Walls Promo Image](/images/solidwalls_promo.png)](http://solidwallsapp.com)
