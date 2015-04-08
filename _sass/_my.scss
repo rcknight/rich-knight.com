@@ -5,3 +5,44 @@
 .post-content {
     margin-bottom: 50px;
 }
+
+.post-header {
+    .share-text {
+        display: block;
+    }
+}
+
+.social-icons {
+    overflow-y: hidden;
+    max-height: 32px; /* approximate max height */
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.social-icons.closed {
+    max-height: 0;
+}
+
+.social-icons a {
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    display: inline-block;
+}
+
+.twitter {
+    background-color: #00ACED;
+}
+
+.reddit {
+    background-color: #FF4500;
+}
+
+.googleplus {
+    background-color: #D14836;
+}
+
+.facebook {
+    background-color: #3B5998;
+}

@@ -13,7 +13,9 @@ permalink: /blog/
         <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
           <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
         </a>
-          <p class="post-summary">{{ post.content }}</p>
+        {% assign social_icons_context = post %}
+        {% include social_links.html %}
+        <p class="post-summary">{{ post.content }}</p>
       </div>
     {% endfor %}
   </div>

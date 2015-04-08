@@ -1,35 +1,67 @@
-<div class="social-icons">
-  <div class="left">
-    {% if site.github_username %}
-      <a class="fa fa-github" href="https://github.com/{{ site.github_username }}"></a>
-    {% endif %}
-    {% if site.stackoverflow_id %}
-      <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}"></a>
-    {% endif %}
-    <a class="fa fa-rss" href="{{ "/feed.xml" | prepend: site.baseurl }}"></a>
-    {% if site.twitter_username %}
-      <a class="fa fa-twitter" href="https://twitter.com/{{ site.twitter_username }}"></a>
-    {% endif %}
-    {% if site.google_plus_id %}
-      <a class="fa fa-google-plus" href="https://plus.google.com/{{ site.google_plus_id }}/posts"></a>
-    {% endif %}
-    {% if site.email %}
-      <a class="fa fa-envelope" href="mailto:{{ site.email }}"></a>
-    {% endif %}
-    {% if site.linkedin_username %}
-      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/{{ site.linkedin_username }}"></a>
-    {% endif %}
-  </div>
-  <div class="right">
-    {% if site.bitcoin_url %}
-      <a class="fa fa-bitcoin" href="{{ site.bitcoin_url }}"></a>
-    {% endif %}
-    {% if site.paypal_url %}
-      <a class="fa fa-paypal" href="{{ site.paypal_url }}"></a>
-    {% endif %}
-    {% if site.flattr_button %}
-      {{ site.flattr_button }}
-    {% endif %}
-  </div>
+{% if social_icons_context %}
+    {% assign article = social_icons_context %}
+{% else %}
+    {% assign article = page %}
+{% endif %}
+<br>
+<span class="post-meta small">Enjoy this article? <a href="javascript:toggleIcons('social-icons-{{ article.id }}')" class="small">Share it</a></span>
+
+<div id="social-icons-{{ article.id }}" class="social-icons closed">
+
+
+    <a class="twitter" href="https://twitter.com/intent/tweet?url={{ site.url | uri_escape }}{{ article.url | uri_escape }}&via=rcknight&text={{ article.title | uri_escape }}" title="Share on Twitter" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 48 48"><path fill="#FFF" d="M10.1 29C6.4 29 2.9 27.9 0 26.1c.5.1 1 .1 1.6.1 3.1 0 5.9-1 8.2-2.8-2.9-.1-5.3-2-6.1-4.6.4.1.8.1 1.2.1.6 0 1.2-.1 1.7-.2-3-.6-5.3-3.3-5.3-6.4v-.1c.9.5 1.9.8 3 .8-1.8-1.2-2.9-3.2-2.9-5.5 0-1.2.3-2.3.9-3.3 3.2 4 8.1 6.6 13.5 6.9-.1-.5-.2-1-.2-1.5C15.6 6 18.5 3 22.2 3c1.9 0 3.6.8 4.8 2.1 1.5-.3 2.9-.8 4.2-1.6-.5 1.5-1.5 2.8-2.9 3.6 1.3-.2 2.6-.5 3.8-1-.9 1.3-2 2.5-3.3 3.4v.8C28.7 19 22.1 29 10.1 29"/></svg>
+    </a>
+
+
+    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | uri_escape }}{{ article.url | uri_escape }}" title="Share on Facebook" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 48 48" enable-background="new 0 0 32 32"><path fill="#FFF" d="M28.5 2h-25C2.7 2 2 2.7 2 3.5v24.9c0 .9.7 1.6 1.5 1.6H17V19h-4v-4h4v-3.2c0-3.6 2.4-5.6 5.6-5.6 1.5 0 2.4.1 3.4.2v3.8h-2.6c-1.8 0-2.4.8-2.4 2.1V15h4.5l-.5 4h-4v11h7.5c.9 0 1.5-.7 1.5-1.5v-25c0-.8-.7-1.5-1.5-1.5z"/></svg>
+    </a>
+
+
+    <a class="googleplus" href="https://plus.google.com/share?url={{ site.url | uri_escape }}{{ article.url | uri_escape }}" title="Share on Google Plus" target="_blank">
+        <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 134.658 131.646" enable- xml:space="preserve">
+            <g>
+            <path fill="#FFF" d="M70.479,71.845l-3.983-3.093c-1.213-1.006-2.872-2.334-2.872-4.765c0-2.441,1.659-3.993,3.099-5.43    c4.64-3.652,9.276-7.539,9.276-15.73c0-8.423-5.3-12.854-7.84-14.956h6.849l7.189-4.517H60.418    c-5.976,0-14.588,1.414-20.893,6.619c-4.752,4.1-7.07,9.753-7.07,14.842c0,8.639,6.633,17.396,18.346,17.396    c1.106,0,2.316-0.109,3.534-0.222c-0.547,1.331-1.1,2.439-1.1,4.32c0,3.431,1.763,5.535,3.317,7.528    c-4.977,0.342-14.268,0.893-21.117,5.103c-6.523,3.879-8.508,9.525-8.508,13.51c0,8.202,7.731,15.842,23.762,15.842    c19.01,0,29.074-10.519,29.074-20.932C79.764,79.709,75.344,75.943,70.479,71.845z M56,59.107    c-9.51,0-13.818-12.294-13.818-19.712c0-2.888,0.547-5.87,2.428-8.199c1.773-2.218,4.861-3.657,7.744-3.657    c9.168,0,13.923,12.404,13.923,20.382c0,1.996-0.22,5.533-2.762,8.09C61.737,57.785,58.762,59.107,56,59.107z M56.109,103.65    c-11.826,0-19.452-5.657-19.452-13.523c0-7.864,7.071-10.524,9.504-11.405c4.64-1.561,10.611-1.779,11.607-1.779    c1.105,0,1.658,0,2.538,0.111c8.407,5.983,12.056,8.965,12.056,14.629C72.362,98.542,66.723,103.65,56.109,103.65z"/>
+            <polygon fill="#FFF" points="98.393,58.938 98.393,47.863 92.923,47.863 92.923,58.938 81.866,58.938 81.866,64.469     92.923,64.469 92.923,75.612 98.393,75.612 98.393,64.469 109.506,64.469 109.506,58.938   "/>
+            </g>
+        </svg>
+    </a>
+
+
+    <a class="reddit" href="http://www.reddit.com/submit?url={{ site.url | uri_escape }}{{ article.url | uri_escape }}&title={{ article.title | uri_escape }}" title="Share on Reddit" target="_blank">
+        <svg x="0px" y="0px" width="32px" height="32px" viewBox="-45 -70 450 450" >
+            <g transform="matrix(12.584949,0,0,12.584949,-584.34433,-1.3717583)">
+                <circle cx="49.683998" cy="11.836" r="2.7019999"
+                   style="fill:#ff4500;stroke:#ffffff;stroke-width:1.10000002"
+                   d="m 52.385998,11.836 c 0,1.492274 -1.209727,2.702 -2.702,2.702 -1.492273,0 -2.702,-1.209726 -2.702,-2.702 0,-1.492273 1.209727,-2.7019995 2.702,-2.7019995 1.492273,0 2.702,1.2097265 2.702,2.7019995 z" />
+                <circle cx="71.786003" cy="11.836" r="2.7019999"
+                   style="fill:#ff4500;stroke:#ffffff;stroke-width:1.10000002"
+                   d="m 74.488003,11.836 c 0,1.492274 -1.209727,2.702 -2.702,2.702 -1.492273,0 -2.702,-1.209726 -2.702,-2.702 0,-1.492273 1.209727,-2.7019995 2.702,-2.7019995 1.492273,0 2.702,1.2097265 2.702,2.7019995 z" />
+                <path d="m 68.226,2.352 c 0,0 0,0 -5.404,-1.272 l -1.986,6.278"
+                    style="fill:none;stroke:#ffffff;stroke-width:1.10000002;stroke-linecap:round;stroke-linejoin:round" />
+                <circle cx="70.431" cy="2.789" r="2.1300001" 
+                   style="fill:#ff4500;stroke:#ffffff;stroke-width:1.10000002"
+                   d="m 72.561,2.789 c 0,1.1763666 -0.953634,2.1300001 -2.13,2.1300001 -1.176367,0 -2.13,-0.9536335 -2.13,-2.1300001 0,-1.1763665 0.953633,-2.13000008 2.13,-2.13000008 1.176366,0 2.13,0.95363358 2.13,2.13000008 z" />
+                <ellipse cx="60.675999" cy="15.552" rx="12.238" ry="7.987"
+                    style="fill:#ff4500;stroke:#ffffff;stroke-width:1.10000002"
+                    d="m 72.913999,15.552 c 0,4.411098 -5.47914,7.987 -12.238,7.987 -6.758861,0 -12.238,-3.575902 -12.238,-7.987 0,-4.411098 5.479139,-7.9869999 12.238,-7.9869999 6.75886,0 12.238,3.5759019 12.238,7.9869999 z" />
+                <g>
+                    <path style="fill:#ffffff;stroke:none"
+                       d="m 135.90625,159.65625 c -13.67995,0 -25.15625,11.4763 -25.15625,25.15625 0,13.67995 11.4763,24.78125 25.15625,24.78125 13.67995,0 24.78125,-11.1013 24.78125,-24.78125 0,-13.67995 -11.1013,-25.15625 -24.78125,-25.15625 z"
+                       transform="matrix(0.07946,0,0,0.07946,45.637601,-0.68559946)" />
+                    <path
+                       style="fill:#ffffff;stroke:none"
+                       d="m 244.46875,159.65625 c -13.68691,0 -25.1875,11.46934 -25.1875,25.15625 0,13.68691 11.50059,24.78125 25.1875,24.78125 13.68692,0 24.78125,-11.09434 24.78125,-24.78125 0,-13.68691 -11.09433,-25.15625 -24.78125,-25.15625 z"
+                       transform="matrix(0.07946,0,0,0.07946,45.637601,-0.68559946)" />
+                    <path
+                        d="m 56.507,19.229 c 1.066,1.066 2.786,1.271 4.212,1.271"
+                        style="fill:none;stroke:#ffffff;stroke-width:1.10000002;stroke-linecap:round" />
+                    <path
+                        d="M 64.963,19.229 C 63.896,20.295 62.177,20.5 60.75,20.5"
+                        style="fill:none;stroke:#ffffff;stroke-width:1.10000002;stroke-linecap:round" />
+                </g>
+            </g>
+        </svg>
+    </a>
 </div>
-<div class="clearfix"></div>
