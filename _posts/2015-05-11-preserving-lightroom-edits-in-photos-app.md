@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Preserving edits while migrating from Lightroom to Photos.app
+title:      Preserving Lightroom edits while migrating to Photos.app
 date:       2015-05-11 20:00
 categories: photography
 ---
