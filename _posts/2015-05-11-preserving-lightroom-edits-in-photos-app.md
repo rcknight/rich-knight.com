@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Preserving Lighroom edits when migrating to Photos.app
+title:      Preserving edits while migrating from Lightroom to Photos.app
 date:       2015-05-11 20:00
 categories: photography
 ---
@@ -11,7 +11,7 @@ There are some things I miss, but having my entire library on all devices is an 
 
 ### The Problem
 
-I capture all my pictures in raw format (using my awesome [Olympus EM10](http://www.amazon.co.uk/gp/product/B00HWRHBV0/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B00HWRHBV0&linkCode=as2&tag=richknightc0d-21&linkId=YJNXDI45XLHGWBQU)) then frequently tweak them afterwards on my laptop.
+I capture all my pictures in raw format (using my awesome [Olympus EM10](http://www.amazon.co.uk/gp/product/B00HWRHBV0/ref=as_li_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B00HWRHBV0&linkCode=as2&tag=richknightc0d-21&linkId=YJNXDI45XLHGWBQU)) then frequentl tweak them afterwards on my laptop.
 This means I had hundreds of files with non-destructive changes stored inside my Lightroom catalog.
 
 I wanted to migrate without losing these edits, but at first glance it seemed my only choice would be to discard them and start again. Turns out there is a simple way to keep edited copies side by side with my originals inside Photos.
