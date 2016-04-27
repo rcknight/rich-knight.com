@@ -5,7 +5,7 @@ date:       2015-04-07 14:30:00
 categories: jekyll
 ---
 
-For a couple of years this site has been hosted on the excellent [Squarespace](http://squarespace.com), but it has always been on my to-do list to create something simple and static. Last week I took the plunge and everything is now up and running using [Jekyll](http://jekyllrb.com/) hosted on [GitHub Pages](https://pages.github.com/).
+For a couple of years this site has been hosted on the excellent [Squarespace](http://squarespace.com), but it has always been on my to-do list to create something simple and static. Last week I took the plunge and everything is now up and running using [Jekyll](http://jekyllrb.com/) hosted on [GitHub Pages](https://pages.github.com/)..
 
 I was keen on keeping the site as lightweight as possible, but I assumed some performance tweaks like minifying html would be impossible without plugins (which don't work on GitHub hosted sites). 
 
