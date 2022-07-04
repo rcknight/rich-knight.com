@@ -20,4 +20,4 @@ git add .
 git commit -m "Update pixyll to $1"
 
 git checkout master
-git rebase upstream-masterls
+git rebase upstream-master
